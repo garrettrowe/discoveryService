@@ -1,0 +1,191 @@
+.inactive-query {
+  display: none !important;
+}
+
+.query-bar {
+  display: flex;
+  min-height: 63px;
+  margin-top: 5px;
+  flex: 0 1 70%;
+  @include from-desktop {
+    // flex: 0 1 50%;
+    width:50%;
+  }
+  .search-bar {
+    margin-bottom: 5px;
+    display: flex;
+    flex: 1;
+
+    &:focus {
+      outline: none;
+    }
+
+    .rbt-input-hint-container {
+      display: flex;
+      flex: 1;
+    }
+    .rbt-input-main {
+      height: 3rem;
+      font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.375rem;
+      letter-spacing: 0;
+      outline: 2px solid transparent;
+      outline-offset: -2px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      background-color: #f3f3f3;
+      color: #171717;
+      padding: 0px 1rem 0 2.5rem;
+      text-overflow: ellipsis;
+      width: 100%;
+      -ms-flex-order: 1;
+      order: 1;
+      transition: background-color 70ms, outline 70ms;
+      border-bottom: 1px solid #8c8c8c;
+
+      &::-webkit-search-cancel-button {
+        position: relative;
+        background: #fff url(icoX.gif) no-repeat right -10px center;
+        border: 1px solid #999;
+        padding: 1px; /* Use the same right padding (18) in jQ! */
+        border-radius: 3px;
+        transition: background 0.4s;
+        cursor: pointer;
+      }
+    }
+
+    .rbt-menu {
+      box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.1);
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: #f3f3f3;
+      max-height: 8.75rem;
+      overflow-y: auto;
+      z-index: 2999;
+
+      li {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        letter-spacing: 0.16px;
+        height: 2.5rem;
+        color: #565656;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: relative;
+
+        &:hover {
+          background-color: #e5e5e5;
+        }
+
+        &.active {
+          background-color: #d5d5d5;
+        }
+
+        a {
+          outline: 2px solid transparent;
+          outline-offset: -2px;
+          display: block;
+          height: 2.5rem;
+          color: #565656;
+          text-decoration: none;
+          font-weight: normal;
+          line-height: 1rem;
+          padding: 0.6875rem 0;
+          margin: 0 1rem;
+          border-top: 1px solid transparent;
+          border-bottom: 1px solid transparent;
+          border-top-color: #dcdcdc;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+
+          .rbt-highlight-text {
+            background-color: #d0ddf4;
+            border-radius: 3px;
+            padding: 0px 2px;
+          }
+        }
+      }
+    }
+    .rbt-sr-status,
+    .rbt-input-hint {
+      display: none !important;
+    }
+  }
+
+  .search {
+    fill: #565656;
+    margin: 13px 8px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .close {
+    display:none;
+  }
+
+  .filter-multiselect {
+    flex: 0 1 20%;
+    height: 3rem;
+    max-height: 3rem;
+  }
+}
+
+.rbt-aux {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34px;
+}
+.rbt-aux .rbt-close {
+  pointer-events: auto;
+}
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+}
+.rbt-close {
+  z-index: 1;
+}
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: 0.8;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

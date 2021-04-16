@@ -1,0 +1,95 @@
+.carousel-panel {
+  width: 100%;
+  padding-top: 15px;
+  // padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+
+  .concept-title {
+    display: flex;
+    flex-direction: row;
+
+    .grayed-out {
+      opacity: 0.5;
+    }
+
+    h4 {
+      font-size: 18px;
+      display: flex;
+      flex: 1;
+    }
+
+    .toggler {
+      margin-left: -6px;
+
+      .chevron-toggle {
+        cursor: pointer;
+        transition: 0.3s all;
+
+        &:hover {
+          color: #0553E9 !important;
+        }
+      }
+    }
+  }
+
+  .concept-body {
+    display: flex;
+    flex-direction: row;
+
+    .concept-img-section {
+      width: 170px;
+      height: 150px;
+      position: relative;
+    }
+
+    .concept-img-skeleton {
+      width: 95%;
+      height: 95%;
+    }
+
+    .concept-img {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius:8px;
+    }
+
+    .concept-abstract {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 10px 25px 10px 20px;
+      line-height:1.4;
+      max-height: 180px;
+      max-height: 170px;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.5);
+        box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+  }
+}
+
+}
+
+.inline {
+  display: inline-block;
+}

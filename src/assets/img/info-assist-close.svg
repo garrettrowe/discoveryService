@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 52 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <defs>
+        <linearGradient x1="72.6685975%" y1="19.4211758%" x2="12.8505007%" y2="84.3831708%" id="linearGradient-1">
+            <stop stop-color="#8A3FFC" offset="0%"></stop>
+            <stop stop-color="#0530AD" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="11.4279375 9 15.75 5.295375 14.8220625 4.5 10.5 8.204625 6.1779375 4.5 5.25 5.295375 9.5720625 9 5.25 12.704625 6.1779375 13.5 10.5 9.795375 14.8220625 13.5 15.75 12.704625"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-8" transform="translate(-1338.000000, -897.000000)">
+            <g id="Group-2" transform="translate(1339.141629, 898.751584)">
+                <circle id="Oval" stroke="url(#linearGradient-1)" stroke-width="1.5" cx="24.6748596" cy="24.6748596" r="24.6748596"></circle>
+                <g id="icon/navigation/close/24" transform="translate(14.068799, 15.583951)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="icon-color" fill="#6E32C9" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

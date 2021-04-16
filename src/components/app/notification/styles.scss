@@ -1,0 +1,15 @@
+.notification {
+  position: absolute;
+  top: 75px;
+  right: 15px;
+  z-index: 900;
+  p {
+    position: relative;
+    bottom: 30px;
+    font-size:12px;
+    font-weight:300;
+    // left: 55px;
+    margin-right:35px;
+    text-align: right;
+  }
+}

@@ -1,0 +1,7 @@
+applications:
+- name: dte-watson-discovery-expert-assist
+  memory: 256M
+  instances: 1
+  
+  env:
+    NODE_ENV: production

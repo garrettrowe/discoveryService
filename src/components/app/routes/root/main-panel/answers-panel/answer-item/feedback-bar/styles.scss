@@ -1,0 +1,19 @@
+.feedback-bar {
+  .vote-up {
+    cursor: pointer;
+    transition: 0.3s ease-in-out fill;
+  
+    &:hover {
+        fill: green !important;
+    }
+  }
+  
+  .vote-down {
+    cursor: pointer;
+    transition: 0.3s ease-in-out fill;
+  
+    &:hover {
+        fill: red !important;
+    }
+  }
+}

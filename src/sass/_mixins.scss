@@ -1,0 +1,60 @@
+@mixin plex($type: "regular") {
+  @if $type == "mono" {
+    font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+  } @else {
+    font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  }
+}
+
+// media query mixins
+
+@mixin from-mobile {
+  @media (min-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin from-wide-mobile {
+  @media (min-width: #{$wide-mobile-width}) {
+    @content;
+  }
+}
+
+@mixin from-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: #{desktop-width}) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin from-wide-desktop {
+  @media (min-width: #{$wide-desktop-width}) {
+    @content;
+  }
+}
+@mixin from-large-desktop {
+  @media (min-width: #{$large-desktop-width}) {
+    @content;
+  }
+}
+@mixin from-xlarge-desktop {
+  @media (min-width: #{$xlarge-desktop-width}) {
+    @content;
+  }
+}
+@mixin from-xxlarge-desktop {
+  @media (min-width: #{$xxlarge-desktop-width}) {
+    @content;
+  }
+}

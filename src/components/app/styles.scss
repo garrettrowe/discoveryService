@@ -1,0 +1,24 @@
+@import url('https://unpkg.com/carbon-components@10.0.0/css/carbon-components.min.css');
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &.active {
+        &::after {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            content: '';
+            background: rgba(black, 0.5);
+            z-index: 200;
+            top: 0;
+            left: 0;
+        }
+    } 
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: none !important;
+}

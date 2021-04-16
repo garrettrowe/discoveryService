@@ -1,0 +1,143 @@
+.qe-panel {
+  position: sticky;
+  top: 4rem;
+  .qe-row {
+    padding: 0px;
+    @include from-desktop {
+      padding: 5px 10px;
+    }
+    display: flex;
+    flex-direction: column;
+    .qe-row-header {
+      display: none;
+      @include from-desktop {
+        display: flex !important;
+      }
+      flex-direction: row;
+      h2 {
+        font-size: 20px;
+      }
+      .logo {
+        width: 20px;
+      }
+      .title {
+        flex: 1;
+        display: flex;
+      }
+    }
+    .mobile-accordion-title {
+      display: flex;
+      margin-bottom: 7px;
+      padding: 5px 0px;
+      transition: 0.3s all ease-in;
+      &:hover {
+        cursor: pointer;
+        background-color: #f4f4f4;
+      }
+      @include from-desktop {
+        display: none;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 3px 0px 0px -3px;
+      }
+      .logo {
+        width: 20px;
+      }
+      .title {
+        flex: 1;
+        display: flex;
+      }
+      .button {
+        display: flex;
+        width: 20px;
+        margin-top: 1px;
+        margin-right: 8px;
+      }
+    }
+    .mobile-accordion-content {
+      display: initial;
+      margin: 0px 0px 0px 26px;
+      @include from-desktop {
+        display: none;
+      }
+    }
+  }
+}
+.mentions-section {
+  display: none;
+  padding: 0px;
+  @include from-desktop {
+    display: flex !important;
+    flex-direction: column;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+  }
+}
+.carousel-row {
+  height: 215px;
+  display: none;
+  @include from-desktop {
+    display: flex !important;
+  }
+}
+
+.fit-content {
+  margin-bottom: 5px;
+  width: fit-content;
+  display: flex;
+  @include from-tablet {
+    display: block;
+  }
+  .document-item {
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.32px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    height: 1.5rem;
+    margin: 0.25rem;
+    border-radius: 0.9375rem;
+    background-color: #dcdcdc;
+    color: #171717;
+    transition: 0.3s ease-in-out all;
+    cursor: pointer;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    @include from-mobile {
+      padding: 1rem 0.5rem;
+    }
+    @include from-tablet {
+      padding: 0 0.5rem;
+    }
+  }
+  .document-count {
+    position: relative;
+    top: -10px;
+    left: -14px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    margin: 0.25rem;
+    min-width: 15px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 4px 6px 4px 6px;
+  }
+}
+
+.og-query {
+  font-style: italic;
+}

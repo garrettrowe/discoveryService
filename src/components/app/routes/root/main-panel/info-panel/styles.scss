@@ -1,0 +1,11 @@
+.info-panel {
+  width: 100%;
+  margin-left: 0px;
+  @include from-desktop {
+    width: 39.5%;
+    min-width: 450px;
+    padding-left:15px;
+  }
+  
+}
+
