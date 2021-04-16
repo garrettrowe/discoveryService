@@ -67,7 +67,9 @@ WDS can be trained to improve the query results by following the instructions on
 The application's required services credentials are stored on the .env file:
 
 DISCOVERY_API_KEY=xxx
+
 DISCOVERY_ENV=xxx
+
 DISCOVERY_ENG_COLLECTION=xxx
 
 > For IBM Cloud deployments, environment variables are best stored on the targeted IBM Cloud resource. The application server only reads the .env on local deployment.
