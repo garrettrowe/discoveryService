@@ -23,6 +23,7 @@ export const QueryBar: FunctionComponent<QueryBarProps> = (
 ): ReactElement<HTMLDivElement> => {
   const { dispatch, selectedStory, loading, query, loadO } = props;
   const [options, setOptions] = useState([]);
+  const [selected, setSelected] = useState([]);
 
   let qq =
     query.location.search === ""
@@ -89,6 +90,7 @@ export const QueryBar: FunctionComponent<QueryBarProps> = (
         className="search-bar"
         isLoading={loadO}
         labelKey="term"
+        selected={selected}
         minLength={5}
         onSearch={handleSearch}
         options={options}
@@ -109,7 +111,8 @@ export const QueryBar: FunctionComponent<QueryBarProps> = (
       sendTestQuery(e.currentTarget.value);
     }
     if (e[0] !== undefined) {
-      sendTestQuery(e[0]);
+      setSelected([e[0].question])
+      sendTestQuery(e[0].question);
     }
   };
 
