@@ -9,14 +9,13 @@ const DiscoveryV1 = require('watson-developer-cloud/discovery/v1');
 const discoveryDefault = new DiscoveryV1({
   version: '2019-04-02',
   iam_apikey: DISCOVERY_API_KEY,
-  url: 'https://gateway.watsonplatform.net/discovery/api'
+  url: 'https://api.us-south.discovery.watson.cloud.ibm.com'
 });
 
 // exposing WDS collection info, likely use for default collection stats before query
 export const wdsInfo = (req: Request, res: Response) => {
     discoveryDefault.listCollections({ environment_id: DISCOVERY_ENV },
       function (error, data) {
-        console.log(JSON.stringify(data, null, 2));
         res.send({
           status: 'success',
           message: 'ok',
@@ -174,7 +173,6 @@ export const wdsQuery = (req: Request, res: Response) => {
             if (rawConceptAggregations[item].matching_results > 3) {
               let conceptItem = {} as ConceptItem
               let key = rawConceptAggregations[item].key
-              console.log(rawConceptAggregations[item])
               let topHitConcept = rawConceptAggregations[item].aggregations[0].hits.hits[0]
               conceptItem.text = topHitConcept.text
               conceptItem.dbpedia = topHitConcept.dbpedia_resource
@@ -238,7 +236,6 @@ export const wdsAC = (req: Request, res: Response) => {
 
   discoveryDefault.query(queryParams,
     function (error, data) {
-    console.log(data)
       if (error) {
         console.log('error', error)
         res.send({
@@ -248,9 +245,6 @@ export const wdsAC = (req: Request, res: Response) => {
           collection_id: collection
         })
       } else {
-
-      console.log(queryParams.natural_language_query)
-
         let answerItems: AnswerItem[] = []
         for (let item in data.passages) {
           if (item) {
@@ -264,7 +258,6 @@ export const wdsAC = (req: Request, res: Response) => {
             }
           }
         }
-console.log("ai: " + JSON.stringify(answerItems))
         res.send({
           status: 'success',
           message: 'ok',

@@ -77,6 +77,7 @@ export const QueryBar: FunctionComponent<QueryBarProps> = (
             term: i.title
           })); 
           setOptions(o)
+          setSelected([]);
           dispatch(setTAOptions(false));
         });
     };
@@ -91,12 +92,12 @@ export const QueryBar: FunctionComponent<QueryBarProps> = (
         isLoading={loadO}
         labelKey="term"
         selected={selected}
-        minLength={5}
+        minLength={4}
         onSearch={handleSearch}
         options={options}
         placeholder="Search the Knowledge Base"
         onKeyDown={onSearchBarKeydown}
-        onChange={onSearchBarKeydown}
+        onChange={onSearchBarChange}
         renderMenuItemChildren={(option, props) => (
                     <Fragment>
                         <span>{option.question}</span>
@@ -107,12 +108,18 @@ export const QueryBar: FunctionComponent<QueryBarProps> = (
   };
 
   const onSearchBarKeydown = (e) => {
+    setSelected([])
     if (e.keyCode === 13 && e.currentTarget.value.length > 0) {
       sendTestQuery(e.currentTarget.value);
     }
     if (e[0] !== undefined) {
-      setSelected([e[0].question])
       sendTestQuery(e[0].question);
+    }
+  };
+  const onSearchBarChange = (e) => {
+    if (e[0] !== undefined) {
+      setSelected([e[0].question])
+      sendTestQuery(e[0].question)
     }
   };
 
