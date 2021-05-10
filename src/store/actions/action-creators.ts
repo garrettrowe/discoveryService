@@ -4,6 +4,14 @@ import { ActionTypes } from 'store/actions'
 import { ModeTypes, IAction } from 'types'
 import { NotificationData } from '../../types/common/types'
 
+
+export const setSelectedAnswer = (answer: any) => {
+  return {
+    type: ActionTypes.SET_SELECTED_ANSWER,
+    payload: { selectedAnswer: answer }
+  }
+}
+
 export const setAuthToken = (authToken: string) => {
   return {
     type: ActionTypes.SET_AUTH_TOKEN,

@@ -87,6 +87,8 @@ export const AnswersPanel: FunctionComponent<AnswerPanelProps> = (props): ReactE
   }
 
   const renderDocumentStatement = () =>{
+    console.log('selectedAnswer', selectedAnswer);
+    
     if (selectedAnswer) {
       if (selectedAnswer.documentLevelAnswer) {
         return (

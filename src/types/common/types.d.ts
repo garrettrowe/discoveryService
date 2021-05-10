@@ -41,6 +41,27 @@ export interface AnswerItem {
   documentLevelAnswer?: boolean
 }
 
+
+export interface QuestionItem {
+  title: string
+  text: string
+  leading_text: string
+  trailing_text: string
+  confidence: number
+  location: number[]
+  file_title: string
+  file_type: string
+  file_name: string
+  file_segment_count: number
+  raw: WDSRawDoc
+  page_num?: string
+  file_author?: string
+  pub_date?: string
+  upVoted?: boolean
+  downVoted?: boolean
+  documentLevelAnswer?: boolean
+}
+
 export interface QueryAggregation {
   original_query: string
   concepts: ConceptItem[]

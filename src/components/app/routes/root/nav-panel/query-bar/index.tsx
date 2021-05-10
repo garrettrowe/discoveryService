@@ -117,6 +117,7 @@ export const QueryBar: FunctionComponent<QueryBarProps> = (
   };
 
   const sendTestQuery = (query_string) => {
+    console.log('sendTestQuery', query_string);
     dispatch(wdsNlQuery({ query_string: query_string }));
   };
 

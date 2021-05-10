@@ -54,6 +54,7 @@ export const appState = (state: InitialAppState = initialAppState, action: IActi
     }
 
     case ActionTypes.SET_SELECTED_STORY: {
+      console.log('SET_SELECTED_STORY', action.payload.selectedStory);
       return {
         ...state,
         selectedStory: action.payload.selectedStory,
